@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #f84747;
+  border-radius: 7px;
+  background-color: #f84747;
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  color: #f84747;
+  background-color: aliceblue;
+}

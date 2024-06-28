@@ -1,0 +1,37 @@
+.navLink {
+  position: relative;
+  padding-bottom: 7px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.navLink:hover,
+.navLinkActive,
+.navLink:active {
+  color: #ff3c60;
+}
+
+.navLink:hover::after,
+.navLinkActive::after,
+.navLink:active::after {
+  width: 100%;
+  background-color: #ff3c60;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
