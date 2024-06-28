@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 1px solid #000;
+  border-radius: 15px;
+
+  width: 350px;
+  min-height: 220px;
+  padding: 15px;
+}
+
+.formInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formInput {
+  height: 35px;
+  font-size: 15px;
+}
+
+.formButton {
+  width: 130px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.formButton:hover {
+  background-color: #dcdcdc;
+}
+
+.error {
+  font-size: 15px;
+  color: #f84747;
+}
