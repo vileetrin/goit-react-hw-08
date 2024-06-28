@@ -1,20 +1,62 @@
-.contactWrapper {
+.form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 
   border: 1px solid #000;
   border-radius: 10px;
-  width: 270px;
-  height: 100px;
-  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contactBtn {
-  border: 1px solid;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
   border-radius: 5px;
+  border: 1px solid #000;
+  height: 27px;
+  width: 300px;
 }
 
-.contactBtn:hover {
-  background-color: #dcdcdc;
+.error {
+  font-size: 15px;
+  color: #f84747;
+}
+
+.button {
+  width: 110px;
+  height: 30px;
+  border: 1px solid #f84747;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #f84747;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: #f84747;
+}
+
+.btnBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

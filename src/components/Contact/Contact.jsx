@@ -26,15 +26,7 @@ export default function Contact({ contact: { id, name, number } }) {
         });
       })
       .catch(() => {
-        toast('Was error, please try again', {
-          style: { background: '#fb30c8' },
-          containerStyle: {
-            top: 150,
-            left: 20,
-            bottom: 20,
-            right: 20,
-          },
-        });
+        toast('Was error, please try again');
       });
   };
 
@@ -49,26 +41,28 @@ export default function Contact({ contact: { id, name, number } }) {
       onSubmit={handleChange}
       validationSchema={contactFormSchema}
     >
-      <Form className={css.formStyle}>
-        <div className={css.fialdStyle}>
-          <label htmlFor={name}>Name</label>
-          <Field className={css.field} id={name} type="text" name="name" />
-          <ErrorMessage className={css.err} name="name" component="span" />
-        </div>
+      <Form className={css.form}>
+        <div className={css.container}>
+          <div className={css.wrapper}>
+            <label htmlFor={name}>Name</label>
+            <Field className={css.input} id={name} type="text" name="name" />
+            <ErrorMessage className={css.error} name="name" component="span" />
+          </div>
 
-        <div className={css.fialdStyle}>
-          <label htmlFor={number}>Number</label>
-          <Field className={css.field} id={number} type="tel" name="number" />
-          <ErrorMessage className={css.err} name="number" component="span" />
-        </div>
+          <div className={css.wrapper}>
+            <label htmlFor={number}>Number</label>
+            <Field className={css.input} id={number} type="tel" name="number" />
+            <ErrorMessage className={css.error} name="number" component="span" />
+          </div>
 
-        <div className={css.btnBlock}>
-          <button className={css.btn} type="submit">
-            Change
-          </button>
-          <button className={css.btnDel} type="button" onClick={handleDelete}>
-            Delete
-          </button>
+          <div className={css.btnBlock}>
+            <button className={css.button} type="submit">
+              Change
+            </button>
+            <button className={css.button} type="button" onClick={handleDelete}>
+              Delete
+            </button>
+          </div>
         </div>
       </Form>
     </Formik>

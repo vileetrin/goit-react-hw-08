@@ -1,4 +1,4 @@
-// import css from './ModalWindow.module.css';
+import css from './ModalWindow.module.css';
 
 import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,9 +23,9 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    border: "none",
+    border: "1px solid #2c2c2c",
     borderRadius: "10px",
-    background: "#e9d8ff",
+    background: "#ffffff",
     overflow: "visible",
     height: "auto",
     width: "auto",
@@ -66,17 +66,14 @@ export default function ModalWindow()  {
       onRequestClose={handleClose}
       style={customStyles}
     >
-      <h3> Please confirm delete the contact</h3>
-      <div >
-        <button onClick={handleConfirm} >
+      <h3 className={css.text}> Please confirm delete the contact</h3>
+      <div className={css.container}>
+        <button onClick={handleConfirm} className={css.button}>
           Yes
         </button>
-        <button onClick={handleClose} >
+        <button onClick={handleClose} className={css.buttonNo}>
           No
         </button>
-
-        
-      
       </div>
     </Modal>
   );
